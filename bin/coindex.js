@@ -7,6 +7,6 @@ const pkg = require("../package.json");
 program
   .name("coindex")
   .version(pkg.version)
+  .command("key", "Manage API keys")
   .description("CLI to get cryptocurrency prices")
-  .command('key','Manage API keys')
   .parse(process.argv);
