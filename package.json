@@ -1,0 +1,12 @@
+{
+  "name": "coindex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": "./bin/coindex.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Khushi Patel",
+  "license": "ISC"
+}
