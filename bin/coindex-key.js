@@ -17,5 +17,12 @@ program
     console.log("Show API keys");
   });
 
+program
+  .name("coindex-key")
+  .command("remove")
+  .description("Remove API keys")
+  .action(() => {
+    console.log("Remove API keys");
+  });
 
 program.parse(process.argv);
