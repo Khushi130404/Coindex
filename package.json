@@ -8,5 +8,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Khushi Patel",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "colors": "^1.4.0",
+    "commander": "^13.1.0",
+    "configstore": "^7.0.0",
+    "inquirer": "^12.6.0"
+  }
 }
