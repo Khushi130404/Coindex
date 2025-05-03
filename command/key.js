@@ -33,8 +33,14 @@ const key = {
       console.log(error.message.red);
     }
   },
-  remove: () => {
-    console.log("Remove API keys");
+  remove(){
+    const keyManag = new KeyManager();
+    try {
+      keyManag.removeKey();
+      console.log("API key removed successfully".blue);
+    } catch (error) {
+      console.log(error.message.red);
+    }
   },
 };
 
