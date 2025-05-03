@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 const colors = require("colors");
 const KeyManager = require("../lib/KeyManager");
-const isRequired = require("../util/validation");
+const { isRequired } = require("../util/validation");
 
 const key = {
   async set() {
@@ -23,8 +23,15 @@ const key = {
       console.log("Failed to set API key".red);
     }
   },
-  show: () => {
-    console.log("Show API keys");
+  show() {
+    const keyManag = new KeyManager();
+    try {
+      const key = keyManag.getKey();
+      console.log("API key: ".blue + key);
+      return key;
+    } catch (error) {
+      console.log(error.message.red);
+    }
   },
   remove: () => {
     console.log("Remove API keys");
