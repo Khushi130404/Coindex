@@ -12,7 +12,7 @@ const key = {
         name: "key",
         message:
           "Enter your API key ".green +
-          "https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?symbol=BTC",
+          "https://coinmarketcap.com/api/documentation/v1/#section/Quick-Start-Guide",
         validate: isRequired,
       },
     ]);
@@ -33,7 +33,7 @@ const key = {
       console.log(error.message.red);
     }
   },
-  remove(){
+  remove() {
     const keyManag = new KeyManager();
     try {
       keyManag.removeKey();
