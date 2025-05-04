@@ -1,7 +1,7 @@
 const axios = require("axios");
 
-const apiKey = "f841b82f-169d-4d02-bb51-75f1a0c075fb"; // Replace with your actual key
-const url = "https://rest.coinapi.io/v1/exchangerate/BTC/USD";
+const apiKey = "f841b82f-169d-4d02-bb51-75f1a0c075fb";
+const url = "https://rest.coinapi.io/v1/exchangerate/BTC/INR";
 
 axios
   .get(url, {
