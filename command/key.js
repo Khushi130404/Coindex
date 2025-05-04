@@ -12,7 +12,7 @@ const key = {
         name: "key",
         message:
           "Enter your API key ".green +
-          "https://coinmarketcap.com/api/documentation/v1/#section/Quick-Start-Guide",
+          "https://console.coinapi.io/team/94b7566e-a8b2-4c59-a1d5-fe693fd42c02/apikeys/create",
         validate: isRequired,
       },
     ]);
