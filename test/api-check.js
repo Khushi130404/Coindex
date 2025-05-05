@@ -1,16 +1,13 @@
 const axios = require("axios");
 
-const apiKey = "f841b82f-169d-4d02-bb51-75f1a0c075fb";
-const url = "https://rest.coinapi.io/v1/exchangerate/BTC/INR";
+const url =
+  "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=inr";
 
 axios
-  .get(url, {
-    headers: {
-      "X-CoinAPI-Key": apiKey,
-    },
-  })
+  .get(url)
   .then((response) => {
-    console.log(`1 BTC = ${response.data.rate} USD`);
+    const rate = response.data.bitcoin.inr;
+    console.log(`1 BTC = ₹${rate}`);
   })
   .catch((error) => {
     console.error(
