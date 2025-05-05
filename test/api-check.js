@@ -1,16 +1,23 @@
 const axios = require("axios");
 
-const apiKey = "f841b82f-169d-4d02-bb51-75f1a0c075fb";
-const url = "https://rest.coinapi.io/v1/exchangerate/BTC/INR";
+const url =
+  "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana&vs_currencies=inr,usd,eur";
 
 axios
-  .get(url, {
-    headers: {
-      "X-CoinAPI-Key": apiKey,
-    },
-  })
+  .get(url)
   .then((response) => {
-    console.log(`1 BTC = ${response.data.rate} USD`);
+    const data = response.data;
+
+    console.log("💰 Current Prices:");
+    console.log(
+      `1 BTC = ₹${data.bitcoin.inr}, $${data.bitcoin.usd}, €${data.bitcoin.eur}`
+    );
+    console.log(
+      `1 ETH = ₹${data.ethereum.inr}, $${data.ethereum.usd}, €${data.ethereum.eur}`
+    );
+    console.log(
+      `1 SOL = ₹${data.solana.inr}, $${data.solana.usd}, €${data.solana.eur}`
+    );
   })
   .catch((error) => {
     console.error(
